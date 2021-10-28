@@ -1,8 +1,7 @@
-
 // Liga e desliga o modal-overlay
 const Modal = {
     open() {
-        //Abrir modal
+        // Abrir modal
         // Adicionar a class active ao modal
         document
             .querySelector('.modal-overlay')
@@ -18,6 +17,7 @@ const Modal = {
             .remove('active')
     }
 }
+
 
 const Storage = {
     get() {
@@ -81,9 +81,7 @@ const DOM = {
 
     transactionsContainer: document.querySelector('#data-table tbody'),
 
-
     addTransaction(transaction, index) {
-
         const tr = document.createElement('tr')
         tr.innerHTML = DOM.innerHTMLTansaction(transaction, index)
         tr.dataset.index = index
@@ -95,7 +93,6 @@ const DOM = {
         const CSSclass = transaction.amount >= 0 ? "income" : "expense"
 
         const Amount = Utils.formatCurrency(transaction.amount)
-
 
         // Cria e retorna a estrutura HTML da transação
         const html = `        
@@ -211,7 +208,6 @@ const Form = {
     submit(event) {
         event.preventDefault()
 
-
         try {
             // verificar se todas as infomações foram preenchidas
             Form.validateFields()
@@ -228,7 +224,6 @@ const Form = {
         } catch (error) {
             alert(error.message)
         }
-
     }
 }
 
