@@ -26,7 +26,6 @@ const Storage = {
     },
     set(transactions) {
         localStorage.setItem("dev.finances:transaction", JSON.stringify(transactions))
-
     }
 }
 
@@ -37,7 +36,6 @@ const Transaction = {
     add(transaction) {
         Transaction.all.push(transaction)
         App.reload()
-
     },
 
     remove(index) {
@@ -244,8 +242,4 @@ const App = {
     }
 }
 
-App.init()
-
-
-
-
+App.init();
